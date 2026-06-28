@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "strict": true,
+
+    "declaration": true,
+
+    "sourceMap": true,
+
+    "removeComments": true,
+
+    "resolveJsonModule": true,
+
+    "allowSyntheticDefaultImports": true,
+
+    "esModuleInterop": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    "skipLibCheck": true,
+
+    "noImplicitAny": true,
+
+    "noUncheckedIndexedAccess": true,
+
+    "exactOptionalPropertyTypes": true,
+
+    "noUnusedLocals": true,
+
+    "noUnusedParameters": true,
+
+    "baseUrl": ".",
+
+    "paths": {
+      "@shared/*": ["packages/shared/src/*"],
+
+      "@signala/shared": ["packages/shared/src/index.ts"],
+
+      "@signala/shared/*": ["packages/shared/src/*"],
+
+      "@signala/collector": ["apps/collector/src/index.ts"],
+
+      "@signala/collector/*": ["apps/collector/src/*"],
+
+      "@signala/feature-engine": ["apps/feature-engine/src/index.ts"],
+
+      "@signala/feature-engine/*": ["apps/feature-engine/src/*"],
+
+      "@signala/baseline-engine": ["apps/baseline-engine/src/index.ts"],
+
+      "@signala/baseline-engine/*": ["apps/baseline-engine/src/*"],
+
+      "@signala/whale-engine": ["apps/whale-engine/src/index.ts"],
+
+      "@signala/whale-engine/*": ["apps/whale-engine/src/*"],
+
+      "@signala/liquidity-engine": ["apps/liquidity-engine/src/index.ts"],
+
+      "@signala/liquidity-engine/*": ["apps/liquidity-engine/src/*"],
+
+      "@signala/market-state-engine": ["apps/market-state-engine/src/index.ts"],
+
+      "@signala/market-state-engine/*": ["apps/market-state-engine/src/*"],
+
+      "@signala/signal-engine": ["apps/signal-engine/src/index.ts"],
+
+      "@signala/signal-engine/*": ["apps/signal-engine/src/*"]
+    }
+  }
+}
