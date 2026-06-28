@@ -1,25 +1,18 @@
 import { RedisStream } from "../streams";
+import { Topics } from "./Topics";
 
 export class RedisBus {
-  publishTrade<T>(symbol: string, data: T): Promise<string> {
-    const stream = new RedisStream(`stream:trades:${symbol}`);
-    return stream.publish(data);
-  }
+  readonly trades = new RedisStream(Topics.TRADES);
 
-  publishFeature<T>(symbol: string, data: T): Promise<string> {
-    const stream = new RedisStream(`stream:features:${symbol}`);
-    return stream.publish(data);
-  }
+  readonly features = new RedisStream(Topics.FEATURES);
 
-  publishSignal<T>(symbol: string, data: T): Promise<string> {
-    const stream = new RedisStream(`stream:signals:${symbol}`);
-    return stream.publish(data);
-  }
+  readonly whales = new RedisStream(Topics.WHALES);
 
-  publishMarket<T>(symbol: string, data: T): Promise<string> {
-    const stream = new RedisStream(`stream:market:${symbol}`);
-    return stream.publish(data);
-  }
+  readonly liquidity = new RedisStream(Topics.LIQUIDITY);
+
+  readonly market = new RedisStream(Topics.MARKET);
+
+  readonly signals = new RedisStream(Topics.SIGNALS);
 }
 
 export const bus = new RedisBus();

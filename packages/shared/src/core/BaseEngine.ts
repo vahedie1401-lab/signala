@@ -1,65 +1,39 @@
-import { logger } from "../logger";
-
-export interface EngineHealth {
-  running: boolean;
-  startedAt: number;
-  processed: number;
-  errors: number;
-}
+import { EngineContext } from "./EngineContext";
 
 export abstract class BaseEngine {
-  protected readonly health: EngineHealth = {
-    running: false,
-    startedAt: 0,
-    processed: 0,
-    errors: 0,
-  };
+  readonly ctx = new EngineContext();
 
-  async boot(): Promise<void> {
-    logger.info(`${this.constructor.name} booting...`);
+  private running = false;
 
-    this.health.running = true;
+  async start() {
+    if (this.running) return;
 
-    this.health.startedAt = Date.now();
+    this.running = true;
 
-    await this.start();
+    await this.initialize();
 
-    logger.info(`${this.constructor.name} started`);
+    this.ctx.logger.info(`${this.name()} started`);
+
+    await this.run();
   }
 
-  async shutdown(): Promise<void> {
-    logger.info(`${this.constructor.name} stopping...`);
+  async stop() {
+    this.running = false;
 
-    this.health.running = false;
+    await this.shutdown();
 
-    await this.stop();
-
-    logger.info(`${this.constructor.name} stopped`);
+    this.ctx.logger.info(`${this.name()} stopped`);
   }
 
-  protected processed() {
-    this.health.processed++;
+  protected isRunning() {
+    return this.running;
   }
 
-  protected error() {
-    this.health.errors++;
-  }
+  abstract name(): string;
 
-  status(): EngineHealth {
-    return { ...this.health };
-  }
+  protected abstract initialize(): Promise<void>;
 
-  abstract start(): Promise<void>;
+  protected abstract run(): Promise<void>;
 
-  abstract stop(): Promise<void>;
+  protected abstract shutdown(): Promise<void>;
 }
-
-// export abstract class BaseEngine {
-//   abstract start(): Promise<void>;
-
-//   abstract stop(): Promise<void>;
-
-//   abstract health(): Promise<boolean>;
-
-//   abstract metrics(): Record<string, unknown>;
-// }

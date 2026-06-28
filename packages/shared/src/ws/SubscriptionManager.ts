@@ -1,7 +1,3 @@
-export interface SubscriptionRequest {
-  stream: string;
-}
-
 export class SubscriptionManager {
   private readonly subscriptions = new Set<string>();
 
@@ -21,27 +17,11 @@ export class SubscriptionManager {
     this.subscriptions.clear();
   }
 
-  size(): number {
-    return this.subscriptions.size;
-  }
-
   values(): string[] {
     return [...this.subscriptions];
   }
 
-  subscribeMessage() {
-    return {
-      method: "SUBSCRIBE",
-      params: this.values(),
-      id: Date.now(),
-    };
-  }
-
-  unsubscribeMessage(streams: string[]) {
-    return {
-      method: "UNSUBSCRIBE",
-      params: streams,
-      id: Date.now(),
-    };
+  get size(): number {
+    return this.subscriptions.size;
   }
 }

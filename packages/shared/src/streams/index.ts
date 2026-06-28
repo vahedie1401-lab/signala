@@ -1,3 +1,7 @@
-export * from "./types";
+export * from "./RedisProducer";
+
+export * from "./RedisConsumer";
+
+export * from "./RedisGroup";
 
 export * from "./RedisStream";

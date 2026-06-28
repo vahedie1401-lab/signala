@@ -1,3 +1,7 @@
-import { TradeEvent } from "../types";
+// import { TradeEvent } from "../types";
 
-export type TradeMessage = TradeEvent;
+// export type TradeMessage = TradeEvent;
+
+import { Trade } from "../types";
+
+export type TradeMessage = Trade;

@@ -1,3 +1,4 @@
-import { SignalEvent } from "../types";
+// import { SignalEvent } from "../types";
+import { Signal } from "../types";
 
-export type SignalMessage = SignalEvent;
+export type SignalMessage = Signal; //SignalEvent;

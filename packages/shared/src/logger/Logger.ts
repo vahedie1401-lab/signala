@@ -3,14 +3,18 @@ import pino from "pino";
 import { config } from "../config";
 
 export const logger = pino({
-  level: config.logger.level,
+  name: config.get("APP_NAME"),
 
-  transport: {
-    target: "pino-pretty",
+  level: config.get("LOG_LEVEL"),
 
-    options: {
-      colorize: true,
-      translateTime: "SYS:standard",
-    },
-  },
+  ...(process.env.NODE_ENV === "development" && {
+    transport: { target: "pino-pretty" },
+  }),
+
+  //  transport:
+  //   process.env.NODE_ENV === "development"
+  //     ? {
+  //         target: "pino-pretty",
+  //       }
+  //     : undefined,
 });

@@ -22,12 +22,7 @@ export function startBinanceWS(symbol: string) {
     // console.log(trade.symbol, trade.price, trade.volume);
 
     // ارسال به Redis Stream
-    const id = await redis.xadd(
-      `stream:trades:${symbol}`,
-      "*",
-      "data",
-      JSON.stringify(trade),
-    );
+    const id = await redis.xadd(`stream:trades:${symbol}`, "*", "data", JSON.stringify(trade));
 
     // console.log("saved", id);
   });

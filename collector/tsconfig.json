@@ -4,8 +4,12 @@
   "compilerOptions": {
     "rootDir": "src",
 
-    "outDir": "dist"
+    "outDir": "dist",
+
+    "composite": true
   },
 
-  "include": ["src"]
+  "include": ["src"],
+
+  "exclude": ["dist"]
 }

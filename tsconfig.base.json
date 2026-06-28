@@ -1,44 +1,38 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ES2022"],
+    "target": "ES2023",
 
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "lib": ["ES2023"],
+
+    "module": "ESNext",
+
+    "moduleResolution": "Bundler",
 
     "strict": true,
 
     "declaration": true,
 
-    "sourceMap": true,
+    "declarationMap": true,
 
-    "removeComments": true,
+    "sourceMap": true,
 
     "resolveJsonModule": true,
 
-    "allowSyntheticDefaultImports": true,
-
     "esModuleInterop": true,
 
-    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
 
     "skipLibCheck": true,
 
-    "noImplicitAny": true,
+    "exactOptionalPropertyTypes": true,
 
     "noUncheckedIndexedAccess": true,
 
-    "exactOptionalPropertyTypes": true,
-
-    "noUnusedLocals": true,
-
-    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": true,
 
     "baseUrl": ".",
 
     "paths": {
-      "@shared/*": ["packages/shared/src/*"],
-
       "@signala/shared": ["packages/shared/src/index.ts"],
 
       "@signala/shared/*": ["packages/shared/src/*"],
@@ -50,10 +44,6 @@
       "@signala/feature-engine": ["apps/feature-engine/src/index.ts"],
 
       "@signala/feature-engine/*": ["apps/feature-engine/src/*"],
-
-      "@signala/baseline-engine": ["apps/baseline-engine/src/index.ts"],
-
-      "@signala/baseline-engine/*": ["apps/baseline-engine/src/*"],
 
       "@signala/whale-engine": ["apps/whale-engine/src/index.ts"],
 
