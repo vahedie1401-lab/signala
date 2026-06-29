@@ -13,6 +13,14 @@ export class RedisBus {
   readonly market = new RedisStream(Topics.MARKET);
 
   readonly signals = new RedisStream(Topics.SIGNALS);
+
+  readonly orderBook = new RedisStream("orderbook-stream");
+
+  readonly funding = new RedisStream("funding-stream");
+
+  readonly openInterest = new RedisStream("open-interest-stream");
+
+  readonly liquidation = new RedisStream("liquidation-stream");
 }
 
 export const bus = new RedisBus();

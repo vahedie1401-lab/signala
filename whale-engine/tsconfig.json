@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.base.json",
+
+  "compilerOptions": {
+    "rootDir": "src",
+
+    "outDir": "dist"
+  },
+
+  "include": [
+    "src",
+    "../packages/shared/src/Indicators",
+    "../packages/shared/src/contracts/events/IndicatorEvent.ts"
+  ]
+}

@@ -1,5 +1,5 @@
 import { EngineManager } from "@signala/shared/core";
-import { LifecycleManager } from "@signala/shared/core";
+import { BaseEngine } from "@signala/shared/core";
 
 // import { CollectorEngine } from "@collector";
 // import { FeatureEngine } from "@feature-engine";
@@ -23,9 +23,9 @@ async function bootstrap() {
 
   //   manager.register(new SignalEngine());
 
-  const lifecycle = new LifecycleManager(manager);
+  //const lifecycle = new LifecycleManager(manager);
 
-  lifecycle.listen();
+  //lifecycle.listen();
 
   await manager.start();
 }
