@@ -1,4 +1,5 @@
 export async function retry(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   fn: () => Promise<any>,
 
   times = 5,

@@ -26,4 +26,6 @@ export enum PipelineStage {
   Api = "api",
 
   Dashboard = "dashboard",
+
+  Risk = "risk",
 }

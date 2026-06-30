@@ -21,6 +21,8 @@ export class RedisBus {
   readonly openInterest = new RedisStream("open-interest-stream");
 
   readonly liquidation = new RedisStream("liquidation-stream");
+
+  readonly risk = new RedisStream("risk");
 }
 
 export const bus = new RedisBus();

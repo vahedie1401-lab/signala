@@ -3,3 +3,4 @@ packages:
   - "packages/*"
   - "indicator-engine/*"
   - "feature-engine/*"
+  - "orderbook-engine/*"

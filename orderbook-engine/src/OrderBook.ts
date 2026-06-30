@@ -1,9 +1,11 @@
-import { BookLevel, DepthUpdate, OrderBookSnapshot } from "./types";
+import { OrderBookLevel } from "./OrderBookLevel";
+import { BookLevel, DepthUpdate } from "./types";
+import { OrderBookSnapshot } from "./OrderBookSnapshot";
 
 export class OrderBook {
-  readonly bids = new Map<number, number>();
+  readonly bids = new Map<number, OrderBookLevel>();
 
-  readonly asks = new Map<number, number>();
+  readonly asks = new Map<number, OrderBookLevel>();
 
   private updateId = 0;
 
@@ -18,7 +20,11 @@ export class OrderBook {
       this.bids.set(
         bid.price,
 
-        bid.quantity,
+        new OrderBookLevel(
+          bid.price,
+
+          bid.quantity,
+        ),
       );
     }
 
@@ -26,7 +32,11 @@ export class OrderBook {
       this.asks.set(
         ask.price,
 
-        ask.quantity,
+        new OrderBookLevel(
+          ask.price,
+
+          ask.quantity,
+        ),
       );
     }
   }
@@ -38,11 +48,21 @@ export class OrderBook {
       if (bid.quantity === 0) {
         this.bids.delete(bid.price);
       } else {
-        this.bids.set(
-          bid.price,
+        const level = this.bids.get(bid.price);
 
-          bid.quantity,
-        );
+        if (level) {
+          level.update(bid.quantity);
+        } else {
+          this.bids.set(
+            bid.price,
+
+            new OrderBookLevel(
+              bid.price,
+
+              bid.quantity,
+            ),
+          );
+        }
       }
     }
 
@@ -53,7 +73,11 @@ export class OrderBook {
         this.asks.set(
           ask.price,
 
-          ask.quantity,
+          new OrderBookLevel(
+            ask.price,
+
+            ask.quantity,
+          ),
         );
       }
     }

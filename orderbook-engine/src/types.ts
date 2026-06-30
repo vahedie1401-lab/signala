@@ -4,19 +4,19 @@ export interface BookLevel {
   quantity: number;
 }
 
-export interface OrderBookSnapshot {
-  symbol: string;
+// export interface OrderBookSnapshot {
+//   symbol: string;
 
-  exchange: string;
+//   exchange: string;
 
-  timestamp: number;
+//   timestamp: number;
 
-  lastUpdateId: number;
+//   lastUpdateId: number;
 
-  bids: BookLevel[];
+//   bids: BookLevel[];
 
-  asks: BookLevel[];
-}
+//   asks: BookLevel[];
+// }
 
 export interface DepthUpdate {
   firstUpdateId: number;
