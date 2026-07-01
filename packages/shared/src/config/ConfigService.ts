@@ -14,6 +14,12 @@ const schema = z.object({
   BINANCE_SPOT_WS: z.string(),
 
   BINANCE_FUTURES_WS: z.string(),
+
+  DISCORD_WEBHOOK_URL: z.string().optional(),
+
+  TELEGRAM_BOT_TOKEN: z.string().optional(),
+
+  TELEGRAM_CHAT_ID: z.string().optional(),
 });
 
 export class ConfigService {

@@ -1,5 +1,5 @@
 {
-  "name": "@signala/collector",
+  "name": "@signala/backtest-engine",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -20,13 +20,10 @@
   },
   "dependencies": {
     "@signala/shared": "workspace:*",
-    "ws": "8.21.0"
+    "@signala/feature-engine": "workspace:*",
+    "@signala/risk-engine": "workspace:*"
   },
   "devDependencies": {
-    "tsx": "^4.19.2",
-    "@types/node": "^26.0.0",
-    "@types/ws": "8.18.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^6.0.3"
+    "tsx": "^4.19.2"
   }
 }

@@ -10,4 +10,8 @@ export const Topics = {
   MARKET: "stream:market",
 
   SIGNALS: "stream:signals",
+
+  INDICATORS: "stream:indicators",
+
+  NOTIFICATIONS: "stream:notifications",
 } as const;

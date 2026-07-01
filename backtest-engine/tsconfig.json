@@ -16,12 +16,6 @@
   "references": [
     { "path": "../packages/shared" },
     { "path": "../feature-engine" },
-    { "path": "../indicator-engine" },
-    { "path": "../whale-engine" },
-    { "path": "../liquidity-engine" },
-    { "path": "../market-state-engine" },
-    { "path": "../signal-engine" },
-    { "path": "../risk-engine" },
-    { "path": "../notification-engine" }
+    { "path": "../risk-engine" }
   ]
 }

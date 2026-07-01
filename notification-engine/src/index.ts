@@ -1,4 +1,4 @@
-//export * from "./NotificationEngine"
+export * from "./NotificationEngine";
 export * from "./NotificationFeature";
 export * from "./NotificationPublisher";
 export * from "./TelegramNotifier";

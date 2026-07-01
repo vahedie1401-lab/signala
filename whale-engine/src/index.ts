@@ -1,9 +1,15 @@
-export * from "./FeatureEngine";
-
-export * from "./FeatureCalculator";
-
-export * from "./FeaturePublisher";
-
-export * from "./FeatureVector";
-
-export * from "./FeatureCache";
+export * from "./WhaleEngine";
+export * from "./WhaleDetector";
+export * from "./WhalePublisher";
+export * from "./WhaleCache";
+export * from "./WhaleSignal";
+export * from "./WhaleScorer";
+export * from "./WhaleConfidence";
+export * from "./WhaleHistory";
+export * from "./SmartMoneyDetector";
+export * from "./AbsorptionDetector";
+export * from "./IcebergDetector";
+export * from "./AggressiveFlowDetector";
+export * from "./LargeTradeDetector";
+export * from "./VolumeSpikeDetector";
+export * from "./WalletTracker";

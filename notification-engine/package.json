@@ -1,5 +1,5 @@
 {
-  "name": "@signala/signal-engine",
+  "name": "@signala/notification-engine",
   "private": true,
   "type": "module",
   "main": "dist/index.js",

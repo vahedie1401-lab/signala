@@ -9,9 +9,11 @@
     "composite": true
   },
 
-  "include": ["src", "index.ts", "tsconfig.json"],
+  "include": ["src"],
 
   "exclude": ["dist"],
 
-  "references": [{ "path": "../packages/shared" }]
+  "references": [
+    { "path": "../packages/shared" } // relative path to shared’s tsconfig
+  ]
 }

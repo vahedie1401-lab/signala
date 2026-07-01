@@ -37,38 +37,46 @@
 
       "@signala/shared/*": ["./packages/shared/src/*"],
 
-      "@signala/collector": ["./apps/collector/src/index.ts"],
+      "@signala/collector": ["./collector/src/index.ts"],
 
-      "@signala/collector/*": ["./apps/collector/src/*"],
+      "@signala/collector/*": ["./collector/src/*"],
 
-      "@signala/feature-engine": ["./apps/feature-engine/src/index.ts"],
+      "@signala/feature-engine": ["./feature-engine/src/index.ts"],
 
-      "@signala/feature-engine/*": ["./apps/feature-engine/src/*"],
+      "@signala/feature-engine/*": ["./feature-engine/src/*"],
 
-      "@signala/whale-engine": ["./apps/whale-engine/src/index.ts"],
+      "@signala/whale-engine": ["./whale-engine/src/index.ts"],
 
-      "@signala/whale-engine/*": ["./apps/whale-engine/src/*"],
+      "@signala/whale-engine/*": ["./whale-engine/src/*"],
 
-      "@signala/liquidity-engine": ["./apps/liquidity-engine/src/index.ts"],
+      "@signala/liquidity-engine": ["./liquidity-engine/src/index.ts"],
 
-      "@signala/liquidity-engine/*": ["./apps/liquidity-engine/src/*"],
+      "@signala/liquidity-engine/*": ["./liquidity-engine/src/*"],
 
-      "@signala/market-state-engine": ["./apps/market-state-engine/src/index.ts"],
+      "@signala/market-state-engine": ["./market-state-engine/src/index.ts"],
 
-      "@signala/market-state-engine/*": ["./apps/market-state-engine/src/*"],
+      "@signala/market-state-engine/*": ["./market-state-engine/src/*"],
 
-      "@signala/signal-engine": ["./apps/signal-engine/src/index.ts"],
+      "@signala/signal-engine": ["./signal-engine/src/index.ts"],
 
-      "@signala/signal-engine/*": ["./apps/signal-engine/src/*"],
+      "@signala/signal-engine/*": ["./signal-engine/src/*"],
 
       //-------------------------------
-      "@signala/indicator-engine": ["./apps/indicator-engine/src/index.ts"],
+      "@signala/indicator-engine": ["./indicator-engine/src/index.ts"],
 
-      "@signala/indicator-engine/*": ["./apps/indicator-engine/src/*"],
+      "@signala/indicator-engine/*": ["./indicator-engine/src/*"],
 
       "@signala/orderbook-engine": ["./orderbook-engine/src/index.ts"],
 
-      "@signala/orderbook-engine/*": ["./apps/orderbook-engine/src/*"]
+      "@signala/orderbook-engine/*": ["./orderbook-engine/src/*"],
+
+      "@signala/risk-engine": ["./risk-engine/src/index.ts"],
+
+      "@signala/risk-engine/*": ["./risk-engine/src/*"],
+
+      "@signala/notification-engine": ["./notification-engine/src/index.ts"],
+
+      "@signala/notification-engine/*": ["./notification-engine/src/*"]
     }
   }
 }

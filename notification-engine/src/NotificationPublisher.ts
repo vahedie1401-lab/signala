@@ -1,3 +1,4 @@
+import { Notification } from "./NotificationFeature";
 import { NotificationFormatter } from "./NotificationFormatter";
 import { TelegramNotifier } from "./TelegramNotifier";
 
@@ -9,7 +10,7 @@ export class NotificationPublisher {
   ) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async publish(signal: any) {
+  async publish(signal: Notification) {
     const text = this.formatter.format(signal);
 
     await this.telegram.send(text);
